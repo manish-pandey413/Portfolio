@@ -22,7 +22,9 @@ export default function Home() {
               "I'm a programmer",
               2000,
               "I'm a problem solver",
-              1000,
+              2000,
+              "I'm a musician",
+              2000,
             ]}
             wrapper="span"
             speed={10}
