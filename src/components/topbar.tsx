@@ -5,25 +5,38 @@ export default function Topbar() {
   return (
     <motion.div
       initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-      className="flex sticky top-0 backdrop-blur-lg w-full text-gray-500" >
-      <div className='flex flex-row absolute right-0'>
-        <div className="navbar m-[0.3rem] px-2 lg:px-7 py-[0.2rem]">
-          <NavLink to="/" end>
-            Home
+      className="flex items-center p-1 text-gray-500" >
+
+      {/* Left part */}
+      <div className="text-[#ffffff] text-[1.1rem] font-bold md:text-[1.8rem] justify-start">
+        <NavLink to="/" end>
+          Manish Pandey
+        </NavLink>
+      </div>
+
+      {/* Center part */}
+      <div className="flex flex-1 px-3 md:px-4 flex-row text-[0.9rem] md:text-[1.1rem] justify-center items-center">
+        <div className="navbar m-[0.5rem] md:m-6 md:mx-13">
+          <NavLink to="/about" end>
+            About
           </NavLink>
         </div>
-        <div className="navbar m-[0.3rem] px-2 lg:px-7 py-[0.2rem]">
+        <div className="navbar m-[0.5rem] md:m-6 md:mx-13">
           <NavLink to="/projects" end>
             Projects
           </NavLink>
         </div>
-        <div className="navbar m-[0.3rem] px-2 lg:px-7 py-[0.2rem]">
+        <div className="navbar m-[0.5rem] md:m-6 md:mx-13">
           <NavLink to="/socials" end>
             Socials
           </NavLink>
         </div>
       </div>
-      <button className="resumeBtn duration-500 hover:scale-120">Resume</button>
+
+      {/* Right part */}
+      <div className="justify-end text-[0.85rem] md:text-[1.1rem]">
+        <button className="resumeBtn rounded-[0.4rem] duration-500 hover:scale-115">Resume</button>
+      </div>
     </motion.div >
   )
 }

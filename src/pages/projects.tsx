@@ -7,7 +7,7 @@ export default function Projects() {
         opacity: 1,
         transition: { ease: "easeIn", duration: 0.8 }
       }}>
-      <p className="justify-center h-dvh content-center text-[3rem] font-[Poppins] font-bold opacity-40">
+      <p className="justify-center my-[4rem] content-center text-[2rem] md:text-[3rem] font-[Poppins] font-bold opacity-40">
         Nothing Yet :(
       </p>
     </motion.div>

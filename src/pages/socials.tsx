@@ -13,7 +13,7 @@ export default function Socials() {
         opacity: 1,
         transition: { ease: "easeIn", duration: 0.8 }
       }}>
-      <div className="flex flex-col p-5 lg:flex-row flex-wrap justify-center lg:justify-start">
+      <div className="flex flex-row flex-wrap justify-center">
         <Card icon={GitIcon} link="https://github.com/manish-pandey413" />
         <Card icon={LeetIcon} link="https://leetcode.com/u/_Manish_Pandey_/" />
         <Card icon={LinkedIcon} link="https://www.linkedin.com/in/manish-pandey-260aab325/" />
