@@ -5,7 +5,7 @@ export default function Topbar() {
   return (
     <motion.div
       initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-      className="flex items-center p-1 text-gray-500" >
+      className="flex sticky top-3 items-center p-1 text-gray-500" >
 
       {/* Left part */}
       <div className="text-[#ffffff] text-[1.1rem] font-bold md:text-[1.8rem] justify-start">
