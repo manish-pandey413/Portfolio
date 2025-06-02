@@ -16,17 +16,17 @@ export default function Topbar() {
 
       {/* Center part */}
       <div className="flex flex-1 px-3 md:px-4 flex-row text-[0.9rem] md:text-[1.1rem] justify-center items-center">
-        <div className="navbar m-[0.5rem] md:m-6 md:mx-13">
+        <div className="navbar m-[0.5rem] md:m-6 md:mx-10 font-semibold">
           <NavLink to="/about" end>
             About
           </NavLink>
         </div>
-        <div className="navbar m-[0.5rem] md:m-6 md:mx-13">
+        <div className="navbar m-[0.5rem] md:m-6 md:mx-10 font-semibold">
           <NavLink to="/projects" end>
             Projects
           </NavLink>
         </div>
-        <div className="navbar m-[0.5rem] md:m-6 md:mx-13">
+        <div className="navbar m-[0.5rem] md:m-6 md:mx-10 font-semibold">
           <NavLink to="/socials" end>
             Socials
           </NavLink>
@@ -35,7 +35,7 @@ export default function Topbar() {
 
       {/* Right part */}
       <div className="justify-end text-[0.85rem] md:text-[1.1rem]">
-        <button className="resumeBtn rounded-[0.4rem] duration-500 hover:scale-115">Resume</button>
+        <button className="resumeBtn rounded-[0.3rem] duration-500 hover:scale-115">Resume</button>
       </div>
     </motion.div >
   )
