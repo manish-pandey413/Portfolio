@@ -9,19 +9,19 @@ export default function Home() {
           opacity: 1,
           transition: { ease: "easeIn", duration: 0.8 }
         }}
-        className="about text-[1.5rem] lg:text-[1.5rem] p-4 lg:w-w/5 text-bold">
+        className="about  md:w-5/10 text-[1.8rem] first-letter:text-[3.2rem] lg:text-[2.5rem] p-4 lg:w-w/5 text-bold">
         Hey! There I&apos;m Manish Pandey.
         <motion.text initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
             transition: { ease: "easeIn", duration: 0.8 }
           }}
-          className="animationAbt text-[1.5rem] lg:text-[1.3rem] p-1 m-2">
+          className="animationAbt text-[1.8rem] lg:text-[2.0rem] p-1 m-1">
           <TypeAnimation
             sequence={[
-              "I'm a programmer",
+              "I'm a problem solver.",
               2000,
-              "I'm a problem solver",
+              "I'm a programmer.",
               2000,
             ]}
             wrapper="span"
