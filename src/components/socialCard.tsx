@@ -1,11 +1,12 @@
 import type { IconType } from "react-icons"
+import { memo } from "react"
 
 interface CardProps {
   icon: IconType,
   link: string,
 }
 
-const Card = (props: CardProps) => {
+const Card = memo((props: CardProps) => {
   return (
     <>
       <a href={props.link} target='_blank' rel="noopener noreferrer" >
@@ -15,6 +16,6 @@ const Card = (props: CardProps) => {
       </a>
     </>
   )
-}
+});
 
 export default Card
