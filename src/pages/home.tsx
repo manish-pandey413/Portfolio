@@ -1,22 +1,20 @@
 import { motion } from "motion/react"
 import { TypeAnimation } from "react-type-animation"
+import terminalImg from "../assets/images/terminal.png"
 
 export default function Home() {
   return (
-    <motion.div className="flex justify-center lg:justify-start h-screen items-center">
-      <motion.text initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { ease: "easeIn", duration: 0.8 }
-        }}
-        className="about  md:w-5/10 text-[1.8rem] first-letter:text-[3.2rem] lg:text-[2.5rem] p-4 lg:w-w/5 text-bold">
-        Hey! There I&apos;m Manish Pandey.
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { ease: "easeIn", duration: 0.6 }
+      }}
+      className="flex justify-center md:justify-start h-screen items-center">
+      <motion.text className="about md:w-45/100 text-[1.8rem] first-letter:text-[3.2rem] md:text-[2.5rem] p-4 md:w-w/5 text-bold">
+        Hey! There I&apos;m Manish Pandey.{"\n"}
         <motion.text initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: { ease: "easeIn", duration: 0.8 }
-          }}
-          className="animationAbt text-[1.8rem] lg:text-[2.0rem] p-1 m-1">
+          className="animationAbt text-[1.8rem] lg:text-[2.0rem]">
           <TypeAnimation
             sequence={[
               "I'm a problem solver.",
@@ -31,6 +29,7 @@ export default function Home() {
           />
         </motion.text>
       </motion.text>
+      <img className="termImg absolute md:top-38/100 lg:top-3/10 md:right-10 w-9/10 md:w-5/10 opacity-7 " src={terminalImg} />
     </motion.div >
   )
 }

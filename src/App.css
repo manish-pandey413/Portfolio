@@ -6,7 +6,7 @@
 }
 
 .navbar{
-  transition: transform 500ms;
+  transition: transform 300ms;
 }
 .navbar:hover{
   transform: translateY(-0.3rem);
@@ -29,10 +29,25 @@
   background-color: rgba(0, 219, 157, 0.7);
   color: #ffffff;
   cursor: pointer;
-  filter: drop-shadow(0 0 2rem rgba(0, 219, 157, 0.8));
+  filter: drop-shadow(0 0 3rem rgba(0, 219, 157, 0.8));
 }
 
 .animationAbt{
-  background-color: rgba(0, 219, 157, 0.5);
-  border-radius: 0.2rem;
+  background-color: #132d21;
+  color: #33b074;
+  border-radius: 0.7rem;
+  padding: 0.6rem;
+}
+
+ @media screen and (max-width: 780px) {
+   .termImg{
+     display: none
+   }
+ }
+
+ .termImg {
+  mask-image: linear-gradient(to right, transparent 0%, black 45%, black 100%, transparent 100%),
+               linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-composite: destination-in;
 }

@@ -4,8 +4,10 @@ import { motion } from "motion/react"
 export default function Topbar() {
   return (
     <motion.div
-      initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-      className="flex sticky top-4 items-center text-gray-500" >
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ ease: "easeIn", duration: 1 }}
+      className="flex bg-[transparent] backdrop-blur-lg sticky top-4 items-center text-gray-500" >
 
       {/* Left part */}
       <div className="text-[#ffffff] shrink text-[1.1rem] font-bold md:text-[1.9rem] md:ml-2 justify-start">
@@ -35,7 +37,12 @@ export default function Topbar() {
 
       {/* Right part */}
       <div className="justify-end text-[0.85rem] md:text-[1.2rem]">
-        <button className="resumeBtn rounded-[0.3rem] duration-500 hover:scale-115">Resume</button>
+        <motion.button
+          whileHover={{ scale: 1.17 }}
+          transition={{ duration: 0.3 }}
+          className="resumeBtn rounded-[0.3rem]">
+          Resume
+        </motion.button>
       </div>
     </motion.div >
   )
