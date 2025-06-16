@@ -50,3 +50,12 @@
   mask-composite: intersect;
   -webkit-mask-composite: destination-in;
 }
+
+.homeIcon {
+  opacity: 0.2;
+}
+
+.homeIcon:hover{
+  opacity: 1;
+  filter: drop-shadow(0 0 0.2rem rgba(0, 219, 157, 0.8));
+}
