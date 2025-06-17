@@ -37,7 +37,7 @@ export default function Home() {
         <br />
 
         {/* Terminal Image */}
-        <img className="termImg absolute md:top-38/100 lg:top-25/100 md:right-10 w-9/10 md:w-5/10 opacity-7 " src={terminalImg} />
+        <img className="termImg absolute md:top-38/100 lg:top-25/100 md:right-10 w-9/10 md:w-5/10 opacity-20 " src={terminalImg} />
 
         {/* Higlighted line  */}
         <motion.div className="py-[0.6rem] md:py-[0.2rem]">

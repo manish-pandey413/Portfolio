@@ -45,7 +45,7 @@
  }
 
  .termImg {
-  mask-image: linear-gradient(to right, transparent 0%, black 45%, black 100%, transparent 100%),
+  mask-image: linear-gradient(to right, transparent 2%, black 100%, black 100%, transparent 100%),
                linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%);
   mask-composite: intersect;
   -webkit-mask-composite: destination-in;
