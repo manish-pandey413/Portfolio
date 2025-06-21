@@ -15,8 +15,8 @@ export default function Home() {
       }}
       className="flex justify-center font-[Montserrat] md:justify-start h-screen items-center"
     >
-      <motion.text className="about md:w-45/100 text-[1.8rem] md:first-letter:text-[3.2rem] md:text-[2.2rem] p-4 md:w-w/5 text-bold">
-        Hey! There I&apos;m Manish Pandey<br />
+      <motion.text className="about md:w-45/100 text-[1.8rem]  md:text-[2.2rem] p-4 md:w-w/5 text-bold">
+        <motion.text className="text-[2.5rem] md:text-[3.8rem]">H</motion.text>ey! There I&apos;m Manish Pandey<br />
 
         {/* Animated about section */}
         <motion.text initial={{ opacity: 0 }}
