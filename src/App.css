@@ -18,7 +18,6 @@
 
 .navbar{
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   background: linear-gradient(
     to top,
     rgba(240, 240, 240, 0.1),
