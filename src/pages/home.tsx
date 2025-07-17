@@ -1,26 +1,49 @@
 import { motion } from "motion/react"
 import { TypeAnimation } from "react-type-animation"
-import terminalImg from "../assets/images/terminal.png"
 import { TfiGithub as GitIcon } from "react-icons/tfi";
 import { SiLeetcode as LeetIcon } from "react-icons/si";
 import { PiLinkedinLogoBold as LinkedIcon } from "react-icons/pi";
 
+const socialContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+      delayChildren: 0.8
+    }
+  }
+}
+
+const avariant = {
+  hidden: {
+    opacity: 0,
+    scale: 0
+  },
+  show: {
+    opacity: 1,
+    scale: 1,
+    ease: "easeOut"
+  }
+}
+
 export default function Home() {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0, scale: 0 }}
       animate={{
         opacity: 1,
-        transition: { ease: "easeIn", duration: 0.6 }
+        scale: 1,
+        transition: { ease: "easeOut", delay: 0.3 }
       }}
-      className="flex justify-center font-[Montserrat] md:justify-start h-screen items-center"
+      className="flex justify-center font-[Montserrat] h-dvh items-center"
     >
-      <motion.text className="about md:w-45/100 text-[1.8rem]  md:text-[2.2rem] p-4 md:w-w/5 text-bold">
+      <motion.text className="text-[1.8rem] transform -translate-y-2/10  md:text-[2.2rem] m-2 text-bold">
         <motion.text className="text-[2.5rem] md:text-[3.8rem]">H</motion.text>ey! There I&apos;m Manish Pandey<br />
 
         {/* Animated about section */}
         <motion.text initial={{ opacity: 0 }}
-          className="animationAbt text-[1.8rem] lg:text-[2.0rem] px-[1rem] pt-[0.5rem] pb-[0.85rem]">
+          className="rounded-[0.7rem] bg-[#132d21] text-[#33b074] text-[1.8rem] lg:text-[2.0rem] px-[1rem] pt-[0.2rem] pb-[0.60rem]">
           <TypeAnimation
             sequence={[
               "I'm a problem solver.",
@@ -36,30 +59,30 @@ export default function Home() {
         </motion.text>
         <br />
 
-        {/* Terminal Image */}
-        <img className="termImg absolute md:top-38/100 lg:top-25/100 md:right-10 w-9/10 md:w-5/10 opacity-20 " src={terminalImg} />
-
         {/* Higlighted line  */}
-        <motion.div className="py-[0.6rem] md:py-[0.2rem]">
-          <motion.text className="text-[1.2rem] opacity-70">
-            Blending <motion.text className="bg-[#0d2847] text-[#3b9eff] px-[1rem] pt-[0.2rem] pb-[0.3rem] rounded-lg">code</motion.text> and <motion.text className="bg-[#331e0b] text-[#ff801f] px-[1rem] pt-[0.2rem] pb-[0.3rem] rounded-lg">creativity</motion.text> to solve real problems.
+        <motion.div className="p-[0.1rem]">
+          <motion.text className="text-[1.1rem] opacity-60">
+            Blending <motion.text className="bg-[#0d2847] text-[#3b9eff] px-[0.8rem] pt-[0.03rem] pb-[0.1em] rounded-lg">code</motion.text> and <motion.text className="bg-[#331e0b] text-[#ff801f] px-[1rem] pt-[0.03rem] pb-[0.1em] rounded-lg">creativity</motion.text> to solve real problems.
           </motion.text>
         </motion.div>
 
         {/* Icons */}
-        <motion.nav
-          className="flex gap-[5rem] text-[2.2rem] py-[2.2rem] flex-row justify-center items-center">
+        <motion.div
+          variants={socialContainer}
+          initial="hidden"
+          animate="show"
+          className="flex gap-[5rem] text-[2.2rem] py-[1.2rem] flex-row justify-center items-center">
 
-          <a href="https://github.com/manish-pandey413" target='_blank' rel="noopener noreferrer" >
+          <motion.a href="https://github.com/manish-pandey413" target='_blank' rel="noopener noreferrer" variants={avariant} >
             <GitIcon className="homeIcon hover:animate-pulse" />
-          </a>
-          <a href="https://leetcode.com/u/_Manish_Pandey_/" target='_blank' rel="noopener noreferrer" >
+          </motion.a>
+          <motion.a href="https://leetcode.com/u/_Manish_Pandey_/" target='_blank' rel="noopener noreferrer" variants={avariant}>
             <LeetIcon className="homeIcon hover:animate-pulse" />
-          </a>
-          <a href="https://www.linkedin.com/in/manish-pandey-260aab325/" target='_blank' rel="noopener noreferrer" >
+          </motion.a>
+          <motion.a href="https://www.linkedin.com/in/manish-pandey-260aab325/" target='_blank' rel="noopener noreferrer" variants={avariant}>
             <LinkedIcon className="homeIcon hover:animate-pulse" />
-          </a>
-        </motion.nav>
+          </motion.a>
+        </motion.div>
 
       </motion.text>
     </motion.div >
