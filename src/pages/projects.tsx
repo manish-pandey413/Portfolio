@@ -18,7 +18,7 @@ const projectContainer = {
 export default function Projects() {
   return (
     <motion.div
-      className="flex flex-col pt-4 flex-wrap md:flex-row justify-center items-center"
+      className="flex flex-col pt-[5rem] flex-wrap md:flex-row justify-center items-center"
       variants={projectContainer}
       initial="hidden"
       animate="show">

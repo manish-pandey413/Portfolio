@@ -36,7 +36,7 @@ export default function Home() {
         scale: 1,
         transition: { ease: "easeOut", delay: 0.3 }
       }}
-      className="flex justify-center font-[Montserrat] h-dvh items-center"
+      className="flex justify-center pt-[5rem] font-[Montserrat] h-dvh items-center"
     >
       <motion.text className="text-[1.8rem] transform -translate-y-2/10  md:text-[2.2rem] m-2 text-bold">
         <motion.text className="text-[2.5rem] md:text-[3.8rem]">H</motion.text>ey! There I&apos;m Manish Pandey<br />
