@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const itemVariant = {
   hidden: {
@@ -15,7 +15,7 @@ const itemVariant = {
 export default function ProjectCard() {
   return (
     <motion.div
-      className="w-[30rem] h-[25rem] bg-[#1d2021] p-4 rounded-lg m-4"
+      className="w-[25rem] h-[25rem] bg-[#1d2021] p-4 rounded-lg m-4"
       variants={itemVariant}
     >
       <motion.text className="justify-center my-[4rem] content-center text-[2rem] md:text-[3rem] font-[Poppins] font-bold opacity-40">

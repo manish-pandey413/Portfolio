@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+import { motion } from "framer-motion"
 import { TypeAnimation } from "react-type-animation"
 import { TfiGithub as GitIcon } from "react-icons/tfi";
 import { SiLeetcode as LeetIcon } from "react-icons/si";
@@ -36,9 +36,9 @@ export default function Home() {
         scale: 1,
         transition: { ease: "easeOut", delay: 0.3 }
       }}
-      className="flex justify-center pt-[5rem] font-[Montserrat] h-dvh items-center"
+      className="flex justify-center pt-[5rem] font-[Montserrat] h-[92vh] items-center"
     >
-      <motion.text className="text-[1.8rem] transform -translate-y-2/10  md:text-[2.2rem] m-2 text-bold">
+      <motion.text className="text-[1.8rem] transform -translate-y-1/10  md:text-[2.2rem] m-2 text-bold">
         <motion.text className="text-[2.5rem] md:text-[3.8rem]">H</motion.text>ey! There I&apos;m Manish Pandey<br />
 
         {/* Animated about section */}
@@ -62,7 +62,7 @@ export default function Home() {
         {/* Higlighted line  */}
         <motion.div className="p-[0.1rem]">
           <motion.text className="text-[1.1rem] opacity-60">
-            Blending <motion.text className="bg-[#0d2847] text-[#3b9eff] px-[0.8rem] pt-[0.03rem] pb-[0.1em] rounded-lg">code</motion.text> and <motion.text className="bg-[#331e0b] text-[#ff801f] px-[1rem] pt-[0.03rem] pb-[0.1em] rounded-lg">creativity</motion.text> to solve real problems.
+            Blending <motion.text className="bg-[#0d2847] text-[#3b9eff] px-[0.6rem] pb-[0.25rem] rounded-lg">code</motion.text> and <motion.text className="bg-[#331e0b] text-[#ff801f] px-[0.6rem] pb-[0.25rem] rounded-lg">creativity</motion.text> to solve real problems.
           </motion.text>
         </motion.div>
 

@@ -1,6 +1,4 @@
-import { motion } from "motion/react";
-import ProjectCard from "../components/projectCard";
-
+import { motion } from "framer-motion";
 
 const projectContainer = {
   hidden: { opacity: 0 },
@@ -18,14 +16,12 @@ const projectContainer = {
 export default function Projects() {
   return (
     <motion.div
-      className="flex flex-col pt-[5rem] flex-wrap md:flex-row justify-center items-center"
       variants={projectContainer}
       initial="hidden"
       animate="show">
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
+      <p className="justify-center content-center text-[2rem] h-[92vh] md:text-[3rem] font-[Poppins] font-bold opacity-40">
+        Coming Soon :)
+      </p>
     </motion.div>
   )
 }

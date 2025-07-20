@@ -1,9 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "Portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://manish-pandey413.github.io",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -14,7 +13,6 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
-    "gh-pages": "^6.3.0",
     "motion": "^12.12.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
