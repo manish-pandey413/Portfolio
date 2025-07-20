@@ -34,7 +34,7 @@ export default function Topbar() {
           transition={{ duration: 0.2, ease: "easeOut" }}
           onClick={() => {
             const link = document.createElement("a");
-            link.href = "";
+            link.href = "https://github.com/manish-pandey413/Portfolio/raw/master/src/assets/Resume.pdf";
             link.download = "Resume.pdf"
             link.click();
           }}
