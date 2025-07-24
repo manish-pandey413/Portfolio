@@ -8,27 +8,32 @@
 .navItem{
   transition: transform 300ms;
 }
+
 .active{
   color: #ffffff;
 }
 
 .navbar{
-  backdrop-filter: blur(8px);
-  background: linear-gradient(
-    to top,
-    rgba(240, 240, 240, 0.12),
-    rgba(255, 255, 255, 0)
-    )
+    backdrop-filter: blur(8px);
 }
 
+@keyframes wiggle{
+   0% { transform: rotate(0deg); }
+  15% { transform: rotate(15deg); }
+  30% { transform: rotate(-15deg); }
+  45% { transform: rotate(10deg); }
+  60% { transform: rotate(-10deg); }
+  75% { transform: rotate(5deg); }
+ 100% { transform: rotate(0deg); }
+}
+
+.homeIcon:hover{
+  opacity: 1;
+  animation: wiggle 0.9s;
+}
+
+
 @media (min-width: 1080px) {
-  .navbar{
-    background: linear-gradient(
-    to top,
-    rgba(240, 240, 240, 0.1),
-    rgba(255, 255, 255, 0)
-    )
-  }
   .navItem:hover{
     transform: translateY(-0.3rem);
     cursor:pointer;
@@ -36,6 +41,10 @@
 }
 
  @media screen and (max-width: 770px){
+  .navbar{
+    background: linear-gradient( to top, rgba(240, 240, 240, 0.1), rgba(255, 255, 255, 0));
+    outline: 1px solid rgba(255 ,255 ,255 ,0.4);
+  }
    .navItem{
      padding: 0 0;
    }
@@ -48,7 +57,6 @@
  }
 
 .resumeBtn {
-  color: #ffffff;
   cursor: pointer;
   filter: drop-shadow(0 0 3rem rgba(0, 219, 157, 0.8));
 }
@@ -57,10 +65,6 @@
   opacity: 0.2;
 }
 
-.homeIcon:hover{
-  opacity: 1;
-  filter: drop-shadow(0 0 0.2rem rgba(0, 219, 157, 0.8));
-}
 .card{
   backdrop-filter: blur(8px);
   background: linear-gradient(

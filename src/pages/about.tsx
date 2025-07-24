@@ -1,4 +1,7 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "motion/react";
+import { NavLink } from "react-router";
+import { FaExternalLinkAlt as OutLink } from "react-icons/fa";
+import { useRef } from "react";
 
 const containerVariant = {
   hidden: { opacity: 0 },
@@ -7,55 +10,61 @@ const containerVariant = {
     transition: {
       staggerChildren: 0.4,
       delayChildren: 0.3,
-      delay: 0.3
+      delay: 0.4,
     }
   }
 }
 
 const childVariant = {
-  hidden: {
-    opacity: 0,
-    scale: 0
+  slideVariant: {
+    hidden: { opacity: 0, x: -200, },
+    show: { opacity: 1, x: 0, ease: "easeOut" }
   },
-  show: {
-    opacity: 1,
-    scale: 1,
-    ease: "easeOut"
+
+  popVariant: {
+    hidden: { opacity: 0, scale: 0 },
+    show: { opacity: 1, scale: 1, ease: "easeOut" }
   }
 }
 
+
 export default function About() {
+  const containerRef = useRef(null);
+  const aboutRef = useRef(null);
+  const isAboutVisible = useInView(aboutRef, { root: containerRef, amount: 0.1 });
+
   return (
     <motion.div
-      className="flex p-8 text-white mt-[4rem]"
+      ref={containerRef}
+      className="flex flex-col p-8 text-white mt-[4rem]"
       variants={containerVariant}
       initial='hidden'
       animate='show'
     >
 
       <motion.div
-        className="grid md:grid-cols-12 md:flex-row p-8 text-white mt-[8rem]"
+        ref={aboutRef}
+        className="grid md:grid-cols-20 md:flex-row text-white mt-[8rem] md:mt-[7rem]"
         variants={containerVariant}
         initial='hidden'
-        animate='show'
+        animate={isAboutVisible ? 'show' : 'hidden'}
       >
         {/* Profile Image */}
-        <motion.div className="md:col-span-3" variants={childVariant}>
-          <img src="profile.png" alt="Profile Image" className="outline outline-white-300 rounded-full flex-grow m-9" />
+        <motion.div className="flex md:col-span-4 md:col-start-15 md:order-1 h-[13rem] outline outline-white-300 rounded-full m-2 md:mb-0 mb-[3rem]" variants={childVariant.popVariant}>
+          <img src="profile.png" alt="Image" className="flex-1 content-center" />
         </motion.div>
 
         {/* Skills Box */}
-        <motion.div className="md:col-span-9 font-light md:ml-[9rem]" variants={childVariant}>
-          <h2 className="text-[1.8rem] mb-2 font-[Saira]">About Me</h2>
-          <p className="text-[1.2rem] text-gray-400 font-[Saira]">
-            Hello, I&apos;m Manish Pandey.<br />
-            I&apos;m a self-taught programmer from India with a solid foundation in <text className="text-[#cc241d] font-bold">Data Structures and Algorithms</text>.<br />
-            I&apos;m continuously exploring new technologies, contributing to <text className="text-[#fe8019] font-bold">personal projects</text>, and leveling up with each problem.<br />
-            Over time, I’ve expanded my skills by working on real-world projects, exploring <text className="text-[#00db9d] font-bold">full-stack development</text>, and experimenting with new tools.
+        <motion.div className="md:col-span-11 font-light md:mr-[4rem]" variants={childVariant.slideVariant}>
+          <h2 className="text-[1.8rem] md:text-[2rem] font-semibold mb-3 font-[Montserrat] text-gray-300">About Me</h2>
+          <p className="text-[1.2rem] md:text-[1.3rem] text-gray-400 font-[Montserrat]">
+            I&apos;m a self-taught programmer from India with a solid foundation in <text className="font-semibold px-2 text-gray-400">Data Structures and Algorithms.</text>
+            I&apos;m continuously exploring new technologies, contributing to personal <NavLink to="/projects" end className="px-2 font-bold inline-flex items-center gap-1 text-gray-400">Projects<OutLink size={12} /></NavLink> and leveling up with each problem.
+            I’ve expanded my skills by working on real-world projects, exploring <text className="font-semibold px-2 text-gray-400">Full-stack Development</text> and experimenting with new tools.
           </p>
         </motion.div>
-      </motion.div>
 
+      </motion.div>
     </motion.div>
   )
 }

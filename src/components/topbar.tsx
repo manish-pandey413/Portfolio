@@ -7,10 +7,10 @@ export default function Topbar() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeOut", duration: 1 }}
-      className="navbar flex z-50 fixed top-4 left-4 right-4 items-center p-2 md:p-0 text-gray-500 rounded-[0.8rem] outline outline-[#ffffff70]" >
+      className="navbar flex z-50 fixed top-4 left-4 right-4 items-center p-[0.6rem] md:p-2 text-gray-500 rounded-[0.8rem]" >
 
       {/* Left part */}
-      <div className="text-[#ffffff] text-[0.9rem] font-bold md:text-[1.5rem] md:ml-7 ml-2 justify-start">
+      <div className="text-[#ffffff] text-[0.9rem] font-bold md:text-[1.8rem] md:ml-7 ml-1 font-[Saira] justify-start">
         <NavLink to="/" end>
           Manish Pandey
         </NavLink>
@@ -35,12 +35,11 @@ export default function Topbar() {
           onClick={() => {
             const link = document.createElement("a");
             link.href = "https://github.com/manish-pandey413/Portfolio/raw/master/src/assets/Resume.pdf";
-            link.download = "Resume.pdf"
             link.click();
           }}
-          className="flex flex-row bg-[#00DB9D]/80 active:bg-[#00DB9D]/50 transition-colors duration-150 justify-center items-center resumeBtn rounded-[0.3rem] px-2 py-[0.1rem] md:my-4">
+          className="resumeBtn flex flex-row bg-[#00DB9D]/20 text-[#00DB9D] active:bg-[#00DB9D]/50 transition-colors duration-150 justify-center items-center rounded-[1rem] px-[0.8rem] md:px-[1.4rem] py-[0.2rem] md:my-[0.4rem] pb-[0.25rem]">
           <svg
-            className="md:w-[1.3rem] w-[1rem] h-[1rem] md:h-[1.4rem] mr-[0.4rem] mb-[0.1rem] md:mb-0"
+            className="md:w-[1.3rem] w-[1rem] h-[1rem] md:h-[1.4rem] mr-[0.4rem] -ml-[0.1rem] mb-[0.1rem] md:mb-0"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -51,7 +50,7 @@ export default function Topbar() {
             <path d="M2 20 h18" />
             <path d="M2 17 v3" />
             <path d="M20 17 v3" />
-            <g className="md:animate-bounce">
+            <g className="animate-bounce">
               <path d="M11 2 v10" />
               <path d="M17 9 l-6 6-6-6" />
             </g>

@@ -38,12 +38,12 @@ export default function Home() {
       }}
       className="flex justify-center pt-[5rem] font-[Montserrat] h-[92vh] items-center"
     >
-      <motion.text className="text-[1.8rem] transform -translate-y-1/10  md:text-[2.2rem] m-2 text-bold">
+      <motion.text className="text-[1.8rem] md:text-[2.2rem] m-2 text-bold">
         <motion.text className="text-[2.5rem] md:text-[3.8rem]">H</motion.text>ey! There I&apos;m Manish Pandey<br />
 
         {/* Animated about section */}
         <motion.text initial={{ opacity: 0 }}
-          className="rounded-[0.7rem] bg-[#132d21] text-[#33b074] text-[1.8rem] lg:text-[2.0rem] px-[1rem] pt-[0.2rem] pb-[0.60rem]">
+          className="rounded-[0.7rem] bg-[#33b074]/20 text-[#33b074] text-[1.8rem] lg:text-[2.0rem] px-[1rem] pt-[0.2rem] pb-[0.60rem]">
           <TypeAnimation
             sequence={[
               "I'm a problem solver.",
@@ -61,8 +61,8 @@ export default function Home() {
 
         {/* Higlighted line  */}
         <motion.div className="p-[0.1rem]">
-          <motion.text className="text-[1.1rem] opacity-60">
-            Blending <motion.text className="bg-[#0d2847] text-[#3b9eff] px-[0.6rem] pb-[0.25rem] rounded-lg">code</motion.text> and <motion.text className="bg-[#331e0b] text-[#ff801f] px-[0.6rem] pb-[0.25rem] rounded-lg">creativity</motion.text> to solve real problems.
+          <motion.text className="text-[1.1rem] text-gray-400">
+            Blending <motion.text className="bg-[#3b9eff]/20 text-[#3b9eff] px-[0.6rem] pb-[0.25rem] rounded-lg">code</motion.text> and <motion.text className="bg-[#ff801f]/20 text-[#ff801f] px-[0.6rem] pb-[0.25rem] rounded-lg">creativity</motion.text> to solve real problems.
           </motion.text>
         </motion.div>
 
@@ -71,7 +71,7 @@ export default function Home() {
           variants={socialContainer}
           initial="hidden"
           animate="show"
-          className="flex gap-[5rem] text-[2.2rem] py-[1.2rem] flex-row justify-center items-center">
+          className="flex gap-[5rem] text-[2.2rem] py-[1.8rem] flex-row justify-center items-center">
 
           <motion.a href="https://github.com/manish-pandey413" target='_blank' rel="noopener noreferrer" variants={avariant} >
             <GitIcon className="homeIcon hover:animate-pulse" />
