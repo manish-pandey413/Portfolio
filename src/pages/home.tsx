@@ -79,7 +79,7 @@ export default function Home() {
           <motion.a href="https://leetcode.com/u/_Manish_Pandey_/" target='_blank' rel="noopener noreferrer" variants={avariant}>
             <LeetIcon className="homeIcon hover:animate-pulse" />
           </motion.a>
-          <motion.a href="https://www.linkedin.com/in/manish-pandey-260aab325/" target='_blank' rel="noopener noreferrer" variants={avariant}>
+          <motion.a href="https://www.linkedin.com/in/manishpandeyyy/" target='_blank' rel="noopener noreferrer" variants={avariant}>
             <LinkedIcon className="homeIcon hover:animate-pulse" />
           </motion.a>
         </motion.div>
