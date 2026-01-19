@@ -30,6 +30,14 @@ export default function Projects() {
         <p>A full stack cross platform mobile application to keep track and manage your expenses. Made using <text className="font-semibold px-1">React Native</text> and <text className="font-semibold px-1">Expo</text>.</p>
       </ProjectCard>
 
+      <ProjectCard
+        ProjectName="YABS"
+        ProjectLink="https://github.com/manish-pandey413/yabs.git"
+        ImagePath=""
+      >
+        <p>A full stack blog site, created to learn backend engineering. Made using <text className="font-semibold px-1">Golang</text> and <text className="font-semibold px-1">React</text>.</p>
+      </ProjectCard>
+
     </motion.div>
   )
 }
