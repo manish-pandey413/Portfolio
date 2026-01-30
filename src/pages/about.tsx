@@ -2,6 +2,7 @@ import { motion, useInView } from "motion/react";
 import { NavLink } from "react-router";
 import { FaExternalLinkAlt as OutLink } from "react-icons/fa";
 import { useRef } from "react";
+import avatar from "../assets/avatar.png"
 
 const containerVariant = {
   hidden: { opacity: 0 },
@@ -36,7 +37,7 @@ export default function About() {
   return (
     <motion.div
       ref={containerRef}
-      className="flex flex-col p-8 text-white mt-[4rem]"
+      className="flex flex-col p-8 text-white  md:mt-[4rem]"
       variants={containerVariant}
       initial='hidden'
       animate='show'
@@ -50,17 +51,17 @@ export default function About() {
         animate={isAboutVisible ? 'show' : 'hidden'}
       >
         {/* Profile Image */}
-        <motion.div className="flex md:col-span-4 md:col-start-15 md:order-1 h-[13rem] outline outline-white-300 rounded-full m-2 md:mb-0 mb-[3rem]" variants={childVariant.popVariant}>
-          <img src="profile.png" alt="Image" className="flex-1 content-center" />
+        <motion.div className="flex md:col-span-5 md:col-start-14 md:order-1 h-[18] md:h-[17rem] justify-center m-2 md:mb-0 mb-[3rem]" variants={childVariant.popVariant}>
+          <img src={avatar} className="avatar rounded-[50rem] opacity-65" />
         </motion.div>
 
         {/* Skills Box */}
         <motion.div className="md:col-span-11 font-light md:mr-[4rem]" variants={childVariant.slideVariant}>
           <h2 className="text-[1.8rem] md:text-[2rem] font-semibold mb-3 font-[Montserrat] text-gray-300">About Me</h2>
           <p className="text-[1.2rem] md:text-[1.3rem] text-gray-400 font-[Montserrat]">
-            I&apos;m a self-taught programmer from India with a solid foundation in <text className="font-semibold px-2 text-gray-400">Data Structures and Algorithms.</text>
+            I&apos;m a self-taught programmer from India with a solid foundation in <text className="font-bold px-2 text-gray-400">Data Structures and Algorithms.</text>
             I&apos;m continuously exploring new technologies, contributing to personal <NavLink to="/projects" end className="px-2 font-bold inline-flex items-center gap-1 text-gray-400">Projects<OutLink size={12} /></NavLink> and leveling up with each problem.
-            I’ve expanded my skills by working on real-world projects, exploring <text className="font-semibold px-2 text-gray-400">Full-stack Development</text> and experimenting with new tools.
+            I’ve expanded my skills by working on real-world projects, exploring <text className="font-bold px-2 text-gray-400">Full-stack Development</text> and experimenting with new tools.
           </p>
         </motion.div>
 

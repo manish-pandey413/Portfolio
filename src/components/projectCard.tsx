@@ -5,7 +5,6 @@ import { TfiGithub as GitIcon } from "react-icons/tfi";
 interface Props {
   ProjectName: string;
   ProjectLink: string;
-  ImagePath: string;
   children: ReactNode;
 }
 
@@ -21,20 +20,19 @@ const itemVariant = {
   }
 }
 
-export default function ProjectCard({ ProjectName, ProjectLink, ImagePath, children }: Props) {
+export default function ProjectCard({ ProjectName, ProjectLink, children }: Props) {
   return (
     <motion.div
       className="w-[20rem] overflow-hidden md:w-[25rem] bg-[#131313] rounded-lg m-4 md:m-8"
       variants={itemVariant}
     >
       <div className='flex justify-center align-center'>
-        <img className='w-[20rem] h-[13rem] md:w-[25rem] bg-[#1d2021] h-[18rem]' src={ImagePath} alt={ProjectName} />
+        <motion.text className="flex justify-center items-center w-[20rem] h-[13rem] md:h-[18rem] md:w-[25rem] text-[2rem] md:text-[3rem] bg-[#1d2021] font-[Poppins] font-bold opacity-70">
+          {ProjectName}
+        </motion.text>
       </div>
 
       <div className="p-4">
-        <motion.text className="text-[2rem] md:text-[3rem] ml-[0.9rem] font-[Poppins] font-bold opacity-70">
-          {ProjectName}
-        </motion.text>
         <motion.text className="text-[1rem] m-4 md:text-[1.1rem] opacity-50">
           {children}
         </motion.text>
