@@ -51,8 +51,8 @@ export default function About() {
         animate={isAboutVisible ? 'show' : 'hidden'}
       >
         {/* Profile Image */}
-        <motion.div className="flex md:col-span-5 md:col-start-14 md:order-1 h-[18] md:h-[17rem] justify-center m-2 md:mb-0 mb-[3rem]" variants={childVariant.popVariant}>
-          <img src={avatar} className="avatar rounded-[50rem] opacity-65" />
+        <motion.div className="flex md:col-span-5 md:col-start-14 md:order-1 justify-center m-2 md:mb-0 mb-[3rem]" variants={childVariant.popVariant}>
+          <img src={avatar} className="avatar h-[15rem] md:h-[17rem] rounded-[50rem] opacity-65" />
         </motion.div>
 
         {/* Skills Box */}
