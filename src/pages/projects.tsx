@@ -23,10 +23,10 @@ export default function Projects() {
       animate="show">
 
       <ProjectCard
-        ProjectName="UNotes"
-        ProjectLink="https://github.com/manish-pandey413/ReactNative-App"
+        ProjectName="FilesGo"
+        ProjectLink="https://github.com/manish-pandey413/filesgo.git"
       >
-        <p>A full stack cross platform mobile application to keep track and manage your expenses. Made using <text className="font-bold px-1">React Native</text> and <text className="font-semibold px-1">Expo</text>.</p>
+        <p>A command line utility tool, used to send files to a device over same network using multipart/form-data MIME type request. Made using <text className="font-bold px-1">Golang</text> and <text className="font-semibold px-1">CUrl</text>.</p>
       </ProjectCard>
 
       <ProjectCard
@@ -35,6 +35,14 @@ export default function Projects() {
       >
         <p>A full stack blog site, created to learn backend engineering. Made using <text className="font-bold px-1">Golang</text> and <text className="font-semibold px-1">React</text>.</p>
       </ProjectCard>
+
+      <ProjectCard
+        ProjectName="UNotes"
+        ProjectLink="https://github.com/manish-pandey413/ReactNative-App"
+      >
+        <p>A full stack cross platform mobile application to keep track and manage your expenses. Made using <text className="font-bold px-1">React Native</text> and <text className="font-semibold px-1">Expo</text>.</p>
+      </ProjectCard>
+
 
     </motion.div>
   )
